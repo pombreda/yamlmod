@@ -6,7 +6,7 @@ setup(
 	description='',
 	url='https://github.com/sciyoshi/yamlmod/',
 	author='Samuel Cormier-Iijima',
-	author_email='sci@sciyoshi.com',
+	author_email='sciyoshi@gmail.com',
 	license='MIT',
 	classifiers=[
 		'Development Status :: 3 - Alpha',
