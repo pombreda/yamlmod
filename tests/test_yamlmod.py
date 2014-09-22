@@ -1,3 +1,4 @@
+import os
 import sys
 
 from nose.tools import *
@@ -33,3 +34,11 @@ def test_import_fixture():
 	eq_(fixture.debug, True)
 	eq_(fixture.domain, 'example.com')
 	eq_(fixture.users, ['alice', 'bob', 'cathy'])
+
+
+@with_setup(setup_yamlmod, teardown_yamlmod)
+def test_hidden_attributes():
+	import fixture
+
+	eq_(fixture.__name__, 'fixture')
+	eq_(fixture.__file__, os.path.join(os.path.dirname(__file__), 'fixture.yml'))
