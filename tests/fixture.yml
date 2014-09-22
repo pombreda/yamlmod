@@ -1,0 +1,8 @@
+debug: true
+
+domain: example.com
+
+users:
+  - alice
+  - bob
+  - cathy
