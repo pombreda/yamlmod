@@ -1,5 +1,7 @@
 # yamlmod
 
+[![Build Status](https://travis-ci.org/sciyoshi/yamlmod.svg?branch=master)](https://travis-ci.org/sciyoshi/yamlmod)
+
 This project allows you to import YAML files directly from Python code. To use
 it, simply add the following line of code to one of your files:
 
