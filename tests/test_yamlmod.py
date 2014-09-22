@@ -3,6 +3,11 @@ import sys
 
 from nose.tools import *
 
+try:
+	from importlib import reload
+except ImportError:
+	pass
+
 def setup_yamlmod():
 	import yamlmod
 	reload(yamlmod)
