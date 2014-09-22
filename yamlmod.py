@@ -39,4 +39,19 @@ class YamlImportHook:
 		# somehow not found, delete from sys.modules
 		del sys.modules[fullname]
 
-sys.meta_path.append(YamlImportHook())
+# support reload()ing this module
+try:
+	hook
+except NameError:
+	pass
+else:
+	try:
+		sys.meta_path.remove(hook)
+	except ValueError:
+		# not found, skip removing
+		pass
+
+# automatically install hook
+hook = YamlImportHook()
+
+sys.meta_path.insert(0, hook)
